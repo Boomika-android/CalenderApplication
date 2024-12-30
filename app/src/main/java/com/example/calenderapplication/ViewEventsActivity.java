@@ -1,5 +1,6 @@
 package com.example.calenderapplication;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +34,7 @@ public class ViewEventsActivity extends AppCompatActivity {
         loadEvents();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void loadEvents() {
         ArrayList<Event> eventArrayList = databaseHelper.view_event();
         adapter = new EventsAdapter(this, eventArrayList);
