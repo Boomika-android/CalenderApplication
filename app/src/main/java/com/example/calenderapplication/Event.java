@@ -1,9 +1,11 @@
 package com.example.calenderapplication;
 
+import androidx.annotation.NonNull;
+
 public class Event {
-    private String date;
-    private String title;
-    private String description;
+    private final String date;
+    private final String title;
+    private final String description;
 
     public Event(String date, String title, String description){
         this.date = date;
@@ -23,18 +25,7 @@ public class Event {
         return description;
     }
 
-    public void setDate(String date){
-        this.date = date;
-    }
-
-    public void setTitle(String title){
-        this.title = title;
-    }
-
-    public void setDescription(String description){
-        this.description = description;
-    }
-
+    @NonNull
     @Override
     public String toString() {
         return "Event{" +

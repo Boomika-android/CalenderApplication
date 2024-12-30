@@ -1,7 +1,7 @@
 package com.example.calenderapplication;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -9,7 +9,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
 public class ViewEventsActivity extends AppCompatActivity {
@@ -18,7 +17,6 @@ public class ViewEventsActivity extends AppCompatActivity {
     DatabaseHelper databaseHelper;
     ArrayList<Event> arrayList;
     EventsAdapter adapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +27,6 @@ public class ViewEventsActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
         recyclerView = findViewById(R.id.recyclerView);
         databaseHelper = new DatabaseHelper(this);
         arrayList = new ArrayList<>();
@@ -37,6 +34,7 @@ public class ViewEventsActivity extends AppCompatActivity {
         loadEvents();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void loadEvents() {
         ArrayList<Event> eventArrayList = databaseHelper.view_event();
         adapter = new EventsAdapter(this, eventArrayList);
