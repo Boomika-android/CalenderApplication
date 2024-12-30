@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="370dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="355dp"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        android:background="@drawable/img_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/courgette"
+            android:gravity="center"
+            android:text="CREATE your event"
+            android:textAllCaps="true"
+            android:textColor="@color/violet"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_date"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_file"
+            android:hint="Date"
+            android:padding="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_title"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_file"
+            android:hint="Title"
+            android:padding="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_description"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_file"
+            android:hint="Description"
+            android:padding="10dp" />
+
+        <Button
+            style="@style/Widget.Material3.CardView.Outlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/green"
+            android:text="SAVE"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
